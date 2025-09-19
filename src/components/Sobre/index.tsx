@@ -63,7 +63,7 @@ const Sobre = () => {
         <div>
           <S.TitleSobre>Sobre mim</S.TitleSobre>
           <S.Text>
-            Olá! Meu nome é Gustavo Farias, tenho 19 anos e estou no primeiro
+            Olá! Meu nome é Gustavo Farias, tenho 20 anos e estou no primeiro
             ano de Engenharia de Software na UniCesumar. Além disso, estou
             cursando Full Stack Python na EBAC, onde já concluí a parte de
             front-end. Atualmente, busco oportunidades no mercado para praticar
