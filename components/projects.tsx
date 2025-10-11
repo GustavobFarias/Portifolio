@@ -24,7 +24,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Eplay",
-      description: "Site de portfólio moderno e responsivo com animações suaves e design minimalista",
+      description: "E-Play é uma plataforma de jogos moderna e responsiva, onde os usuários podem explorar diferentes títulos, ver detalhes de cada jogo, gerenciar favoritos e acessar suas compras de forma prática, com design minimalista e animações suaves.",
       image: "/eplay.png",
       tags: ["HTML", "React", "Reducer", 'TypeScript'],
       github: "https://github.com",
@@ -32,7 +32,7 @@ export default function Projects() {
     },
     {
       title: "Efood",
-      description: "Site de portfólio moderno e responsivo com animações suaves e design minimalista",
+      description: "E-Food é uma plataforma de delivery desenvolvida para facilitar pedidos de refeições de forma prática e eficiente. O sistema permite que usuários explorem restaurantes, visualizem cardápios, escolham pratos e concluam pedidos em poucos cliques.",
       image: "/efood.png",
       tags: ["HTML", "React", "Reducer", 'TypeScript'],
       github: "https://github.com/GustavobFarias/Efood",
