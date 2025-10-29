@@ -60,7 +60,7 @@ export default function Hero() {
           >
             <Button size="lg" asChild className="group">
               <a
-                href="/curriculo.pdf"
+                href="/curriculo-gustavo.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
