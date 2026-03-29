@@ -20,8 +20,8 @@ import {
   SiBootstrap,
   SiSass,
   SiRedux,
-  SiJest
-} from "react-icons/si"
+  SiJest,
+} from "@/lib/skill-icons"
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false)

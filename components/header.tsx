@@ -168,7 +168,7 @@ export default function Header() {
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isMobileMenuOpen ? (
-              ''
+              <X style={{ width: "32px", height: "32px" }} />
             ) : (
               <Menu style={{ width: "32px", height: "32px" }} />
             )}
