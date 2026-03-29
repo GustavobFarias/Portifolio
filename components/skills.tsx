@@ -5,7 +5,7 @@ import { Code2, Database, Palette, Server, Smartphone, Terminal, Boxes, GitBranc
 
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiReact,
   SiNodedotjs,
@@ -131,7 +131,7 @@ export default function Skills() {
 
 const skills = [
   { name: "HTML5", icon: SiHtml5 },
-  { name: "CSS3", icon: SiCss3 },
+  { name: "CSS3", icon: SiCss },
   { name: "JavaScript", icon: SiJavascript },
   { name: "React", icon: SiReact },
   { name: "Node.js", icon: SiNodedotjs },
