@@ -1,27 +1,47 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Code2, Database, Palette, Server, Smartphone, Terminal, Boxes, GitBranch, Figma, FileCode } from "lucide-react"
-
+import type { LucideIcon } from "lucide-react"
 import {
-  SiHtml5,
-  SiCss,
-  SiJavascript,
-  SiReact,
-  SiNodedotjs,
-  SiExpress,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiMongodb,
-  SiGit,
-  SiDocker,
-  SiFigma,
-  SiBootstrap,
-  SiSass,
-  SiRedux,
-  SiJest,
-} from "@/lib/skill-icons"
+  Atom,
+  Boxes,
+  Braces,
+  Container,
+  Database,
+  FileCode,
+  FileType,
+  GitBranch,
+  Layers,
+  LayoutGrid,
+  Paintbrush,
+  Palette,
+  PenTool,
+  Server,
+  TestTube,
+  Wind,
+  Zap,
+} from "lucide-react"
+
+/** Ícones Lucide (evita react-icons: barrel do Next falha na Vercel com JSON/undefined). */
+const skillsData: { name: string; icon: LucideIcon }[] = [
+  { name: "HTML5", icon: FileCode },
+  { name: "CSS3", icon: Paintbrush },
+  { name: "JavaScript", icon: Braces },
+  { name: "React", icon: Atom },
+  { name: "Node.js", icon: Server },
+  { name: "Express", icon: Zap },
+  { name: "Next.js", icon: Boxes },
+  { name: "Tailwind CSS", icon: Wind },
+  { name: "TypeScript", icon: FileType },
+  { name: "MongoDB", icon: Database },
+  { name: "Bootstrap", icon: LayoutGrid },
+  { name: "Sass", icon: Palette },
+  { name: "Redux", icon: Layers },
+  { name: "Jest", icon: TestTube },
+  { name: "Docker", icon: Container },
+  { name: "Figma", icon: PenTool },
+  { name: "Git", icon: GitBranch },
+]
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false)
@@ -129,26 +149,6 @@ export default function Skills() {
     }
   }, [])
 
-const skills = [
-  { name: "HTML5", icon: SiHtml5 },
-  { name: "CSS3", icon: SiCss },
-  { name: "JavaScript", icon: SiJavascript },
-  { name: "React", icon: SiReact },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "Express", icon: SiExpress },
-  { name: "Next.js", icon: SiNextdotjs },
-  { name: "Tailwind CSS", icon: SiTailwindcss },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Bootstrap", icon: SiBootstrap },
-  { name: "Sass", icon: SiSass },
-  { name: "Redux", icon: SiRedux },
-  { name: "Jest", icon: SiJest },
-  { name: "Docker", icon: SiDocker },
-  { name: "Figma", icon: SiFigma },
-  { name: "Git", icon: SiGit },
-]
-
   return (
     <section id="skills" ref={sectionRef} className="py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,7 +174,7 @@ const skills = [
               msOverflowStyle: "none"
             }}
           >
-            {[...skills, ...skills].map((skill, index) => {
+            {[...skillsData, ...skillsData].map((skill, index) => {
               const Icon = skill.icon
               return (
                 <div
@@ -188,7 +188,7 @@ const skills = [
                     }
                   `}
                   style={{
-                    transitionDelay: isVisible ? `${(index % skills.length) * 80 + 200}ms` : "0ms"
+                    transitionDelay: isVisible ? `${(index % skillsData.length) * 80 + 200}ms` : "0ms"
                   }}
                 >
                   <div className="bg-card border border-border rounded-xl p-6 w-40 h-40 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:scale-110 hover:border-primary hover:shadow-lg hover:shadow-primary/20">
